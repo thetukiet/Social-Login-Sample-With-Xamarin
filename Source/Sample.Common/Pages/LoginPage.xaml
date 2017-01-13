@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sample.Common.Pages.LoginPage">
+  <ContentPage.Content>
+    <RelativeLayout x:Name="MainLayout" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+      <!-- Background -->
+      <Image
+        Aspect="AspectFill"
+        RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+        RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}"
+        Source = "Image_ScreenWall4.jpg">
+      </Image>
+      <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Height,
+                                Factor=1}">
+        <Grid.RowDefinitions>
+          <RowDefinitionCollection>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+          </RowDefinitionCollection>
+        </Grid.RowDefinitions>
+        
+        <StackLayout Padding="20,80,20,20" Grid.Row="0">
+          <Image Source="Icon_Xamarin.png" WidthRequest="130" HeightRequest="130"/>
+          <Label HorizontalOptions="Center" TextColor="{StaticResource BrightColor}" Margin="5,10,0,20" FontSize="18" 
+                 Text="{StaticResource AppTitle}" />
+        </StackLayout>
+        
+        <StackLayout Padding="20,10,20,20" Grid.Row="1">          
+          <Grid HorizontalOptions="Center" WidthRequest="400" Margin=" 0,10,0,0">
+            <Button x:Name="FacebookSubmitButton" BackgroundColor="{StaticResource FacebookColor}" Text="{StaticResource FacebookBtnLabel}" 
+                    Style="{StaticResource IconButtonStyle}"/>
+            <Image Source="Icon_Facebook.png" HorizontalOptions="Start" WidthRequest="30" Margin="15,0,0,0"/>
+          </Grid>
+          
+          <Grid HorizontalOptions="Center" WidthRequest="400" Margin=" 0,10,0,20">
+            <Button x:Name="GooglePlusSubmitButton" HorizontalOptions="Center"
+                    BackgroundColor="{StaticResource GooglePlusColor}" Text="{StaticResource GooglePlusBtnLabel}" 
+                    Style="{StaticResource IconButtonStyle}"/>
+            <Image Source="Icon_GooglePlus.png" HorizontalOptions="Start" WidthRequest="30" Margin="15,0,0,0"/>
+          </Grid>
+
+          
+          <Label HorizontalOptions="Center" TextColor="{StaticResource BrightColor}" Margin="5,10,0,20" FontSize="15" 
+                 Text="{StaticResource RegisterLabel}"/>
+          
+          <!--          
+          <Entry x:Name="EmailField" Text="" Placeholder="Email" Keyboard="Email" FontSize="14" PlaceholderColor="#b1b1b1"
+                 HorizontalOptions="Center" WidthRequest="400" TextColor="Black" BackgroundColor="#f3f3f3"/>
+          
+          <Entry x:Name="FirstNameField" Text="" Placeholder="First name" FontSize="14" PlaceholderColor="#b1b1b1"
+                 HorizontalOptions="Center" WidthRequest="400" TextColor="Black" BackgroundColor="#f3f3f3"/>
+          
+          <Entry x:Name="LastNameField" Text="" Placeholder="Last name" FontSize="14" PlaceholderColor="#b1b1b1"
+                 HorizontalOptions="Center" WidthRequest="400" TextColor="Black" BackgroundColor="#f3f3f3"/>
+
+          <Button x:Name="SubmitButton" HorizontalOptions="Center" WidthRequest="400" BackgroundColor="#f78f1e"
+                  Text="{x:Static common:LabelResources.Register}" TextColor="White" Margin=" 0,10,0,0"/>-->
+        </StackLayout>
+      </Grid>
+
+      <StackLayout x:Name="IndicatorPanel"
+                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=1}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Height,
+                                Factor=1}" />
+
+      <ActivityIndicator x:Name="Indicator" 
+                         Color="White" HorizontalOptions="Center" VerticalOptions="Center"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=0.48}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Height,
+                                Factor=0.48}"/>
+    </RelativeLayout>
+  </ContentPage.Content>
+</ContentPage>

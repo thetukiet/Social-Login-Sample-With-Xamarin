@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xc="clr-namespace:Sample.Common.Controls;assembly=Sample.Droid"
+             x:Class="Sample.Common.Pages.WelcomePage">
+
+  <ContentPage.Content>
+    <RelativeLayout x:Name="MainLayout" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+      <!-- Background -->
+      <Image x:Name="ProfileBackgourndImage"
+        Aspect="AspectFill"
+        RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+        RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}"
+        Source = "Image_ScreenWall6.jpg">
+      </Image>
+      <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Height,
+                                Factor=1}">
+        <Grid.RowDefinitions>
+          <RowDefinitionCollection>
+            <RowDefinition Height="250" />
+            <RowDefinition Height="*" />
+          </RowDefinitionCollection>
+        </Grid.RowDefinitions>
+
+        <StackLayout Padding="0,0,0,0" Grid.Row="0">
+          <Grid Padding="5,5,5,5" BackgroundColor="#52101010">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinitionCollection>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+              </ColumnDefinitionCollection>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="LogoutButton" Text="{StaticResource LogoutLabel}" FontSize="12" Grid.Column="1"
+                    HeightRequest="34" BackgroundColor="#095761" Margin="0,0,10,0" BorderRadius="17"/>
+          </Grid>
+
+          <Label x:Name="ProfileNameLabel" Text="Annonimous" HorizontalOptions="Center" TextColor="White" Margin="0,40,0,0" FontSize="25"/>
+        </StackLayout>
+
+        <StackLayout Padding="20,80,20,20" Grid.Row="1" BackgroundColor="White">
+          <Label Text="{StaticResource ProfileInfoLabel}" HorizontalOptions="Start" TextColor="#f1751d" FontSize="17" Margin="0,20,0,5"/>
+          <!--<BoxView BackgroundColor="#737986" HeightRequest="1" Margin="50,0,50,0" />-->
+          <Grid Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinitionCollection>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+              </ColumnDefinitionCollection>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinitionCollection>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+              </RowDefinitionCollection>
+            </Grid.RowDefinitions>
+              <Label Grid.Column="0" Grid.Row="0" Text="{StaticResource SocialDomainLabel}" Style="{StaticResource ProfileInfoLabelStyle}"/>
+              <Label Grid.Column="0" Grid.Row="1" Text="{StaticResource SocialIdLabel}" Style="{StaticResource ProfileInfoLabelStyle}"/>
+              <Label Grid.Column="0" Grid.Row="2" Text="{StaticResource EmailLabel}" Style="{StaticResource ProfileInfoLabelStyle}"/>
+            <Label Grid.Column="1" x:Name="SociaLabel" Grid.Row="0" Text="No info" Style="{StaticResource ProfileInfoTextStyle}"/>
+            <Label Grid.Column="1" x:Name="SocialIdLabel" Grid.Row="1" Text="No info" Style="{StaticResource ProfileInfoTextStyle}"/>
+            <Label Grid.Column="1" x:Name="EmaiLabel" Grid.Row="2" Text="No info" Style="{StaticResource ProfileInfoTextStyle}"/>
+          </Grid>
+        </StackLayout>
+      </Grid>
+
+      <StackLayout Style="{StaticResource AvatarLayoutStyle}">
+        <xc:CircleImage x:Name="ProfileImage" WidthRequest="170" HeightRequest="170"
+                      BorderColor="#e5e7e7e7" BorderThickness="6" FillColor="Pink" 
+                      Source="Icon_User.png" Aspect="AspectFit"/>
+        <!--<Frame WidthRequest="170" HeightRequest="170" BackgroundColor="#52101010"/>-->
+      </StackLayout>
+
+
+    </RelativeLayout>
+  </ContentPage.Content>
+</ContentPage>

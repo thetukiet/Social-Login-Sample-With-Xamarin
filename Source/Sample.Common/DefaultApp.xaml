@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             x:Class="Sample.Common.DefaultApp">
+  <Application.Resources>
+    <ResourceDictionary>
+      <system:String x:Key="AppTitle">XAMARIN SAMPLE</system:String>
+      <system:String x:Key="LogoutLabel">Sign out</system:String>
+      <system:String x:Key="ProfileInfoLabel">Profile Information</system:String>
+      <system:String x:Key="SocialDomainLabel">Network</system:String>
+      <system:String x:Key="SocialIdLabel">ID</system:String>
+      <system:String x:Key="EmailLabel">Email</system:String>
+      <system:String x:Key="RegisterLabel">Register New Account</system:String>
+      <system:String x:Key="GooglePlusBtnLabel">Login with Google</system:String>
+      <system:String x:Key="FacebookBtnLabel">Login with Facebook</system:String>
+
+      <!-- COLORS -->
+      <Color x:Key="BrightColor">#e5e5e5</Color>
+      <Color x:Key="FacebookColor">#3B5998</Color>
+      <Color x:Key="GooglePlusColor">#dd4d40</Color>
+
+      <!-- IMAGES -->
+      <FileImageSource x:Key="FacebookIcon">Icons/Facebook.png</FileImageSource>
+
+      <!-- STYLES -->
+      <Style x:Key="IconButtonStyle" TargetType="Button">
+        <Setter Property="BorderRadius" Value="25" />
+        <Setter Property="WidthRequest" Value="400" />
+        <Setter Property="HeightRequest" Value="50" />
+      </Style>
+      <Style x:Key="NormalButtonStyle" TargetType="Button">
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="BorderRadius" Value="25" />
+        <Setter Property="WidthRequest" Value="130" />
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="FontSize" Value="17" />
+      </Style>
+
+      <Style x:Key="AvatarLayoutStyle" TargetType="StackLayout">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="RelativeLayout.WidthConstraint" Value="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"/>
+        <Setter Property="RelativeLayout.YConstraint" Value="{ConstraintExpression Type=Constant, Constant=160}"/>
+      </Style>
+
+      <Style x:Key="ProfileInfoLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="#034664"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="HorizontalOptions" Value="End"/>
+      </Style>
+
+      <Style x:Key="ProfileInfoTextStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="#358bc5"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Margin" Value="7,0,0,0"/>
+      </Style>
+
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

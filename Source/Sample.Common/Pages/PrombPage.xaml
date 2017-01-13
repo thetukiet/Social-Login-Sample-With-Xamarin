@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sample.Common.Pages.PrombPage">
+  <ContentPage.Content>
+    <RelativeLayout x:Name="MainLayout" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+      <!-- Background -->
+      <Image x:Name="ProfileBackgourndImage"
+        Aspect="AspectFill"
+        RelativeLayout.WidthConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+        RelativeLayout.HeightConstraint= "{ConstraintExpression Type=RelativeToParent, Property=Height}"
+        Source = "Image_ScreenWall12.jpg">
+      </Image>
+      <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Width,
+                                Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                Property=Height,
+                                Factor=1}">
+        <Grid.RowDefinitions>
+          <RowDefinitionCollection>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="150" />
+          </RowDefinitionCollection>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Margin="30,0,30,0">
+          <Image x:Name="MainIconImage" Source="Icon_Question.png" WidthRequest="100" HeightRequest="100" Margin="0,100,0,0" Opacity="0.9"/>
+          <Label x:Name="QuestionContentLabel" Text="Do you want to create something cool?  👽" TextColor="White"
+                 HorizontalTextAlignment="Center" FontSize="19" Margin="0,70,0,0"/>
+        </StackLayout>
+        <Grid Grid.Row="1" Margin="40,30,40,30">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinitionCollection>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="*" />
+            </ColumnDefinitionCollection>          
+          </Grid.ColumnDefinitions>
+          <StackLayout Grid.Column="0" >
+            <Button x:Name="YesButton" Text="Yes" Margin="0,0,10,0" BackgroundColor="#6bbd4e" Style="{StaticResource NormalButtonStyle}"/>
+          </StackLayout>
+          <StackLayout Grid.Column="1" >
+            <Button x:Name="NoButton" Text="No" Margin="10,0,0,0" BackgroundColor="#095761" Style="{StaticResource NormalButtonStyle}"/>
+          </StackLayout>
+        </Grid>
+
+        <!--<RelativeLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  Grid.Row="1" Margin="40,30,40,30">
+          <Button x:Name="YesButton" Text="Yes" BackgroundColor="#6bbd4e" Style="{StaticResource NormalButtonStyle}"/>
+          <Button x:Name="NoButton" Text="No" BackgroundColor="#095761" Style="{StaticResource NormalButtonStyle}"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=210}" />
+        </RelativeLayout>-->
+      </Grid>
+    </RelativeLayout>
+
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ApplicationName">Sample.Android</string>
+    <string name="com.crashlytics.android.build_id">a6a69e4287a4cee680296fc418379ec71b85e079</string>
+</resources>

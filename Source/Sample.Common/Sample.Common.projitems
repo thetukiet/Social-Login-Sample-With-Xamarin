@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>38a3987b-7c37-4ba0-8222-d9b567b0cdde</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Sample.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CircleImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DefaultApp.xaml.cs">
+      <DependentUpon>DefaultApp.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\SocialAccountInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\LogInInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\UsingEnums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlobleSetting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\CachingHelper .cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ICommonHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\NetworkHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ResourceHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlobleMessages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ValidationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginFacebookPage.xaml.cs">
+      <DependentUpon>LoginFacebookPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginGooglePlusPage.xaml.cs">
+      <DependentUpon>LoginGooglePlusPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\PrombPage.xaml.cs">
+      <DependentUpon>PrombPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Helpers\Gifs\Loading.gif" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Icons\Facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\WelcomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\LoginFacebookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Icons\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Icons\Oaxusa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Icons\GooglePlus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\LoginGooglePlusPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DefaultApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PrombPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
